@@ -1,11 +1,11 @@
 import React, {useState} from "react"
 import "./App.css"
 
-import MovieSelector from "./components/MovieSelector"
+
 import SeatAvailability from "./components/SeatAvailability"
 import SeatMatrix from "./components/SeatMatrix"
 import PriceCalculator from "./components/PriceCalculator"
-import GithubLogo from './components/GithubLogo'
+import Time from "./components/Time"
 
 import MovieContext from './contexts/MovieContext'
 
@@ -27,11 +27,11 @@ const App = () => {
 	return (
 		<div className="main container">
 			<MovieContext.Provider value={{ movies, changeState: EditMovies }}>
-				<GithubLogo/>
-				<MovieSelector />
+				
 				<SeatMatrix />
 				<SeatAvailability />
 				<PriceCalculator />
+				{/* <Time/> */}
 			</MovieContext.Provider>
 		</div>
 	)
